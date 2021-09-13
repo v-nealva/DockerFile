@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y supervisor && apt-get install -y openss
 RUN apt-get install -y tcptraceroute && apt-get install -y net-tools && apt-get install -y wget && apt-get install -y telnet && apt-get install -y dnsutils
 RUN apt-get install -y locales
 RUN dpkg-reconfigure locales
-RUN sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
-    locale-gen
+RUN sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
 ENV LANG pt_BR.UTF-8  
 ENV LANGUAGE pt_BR:pt  
 ENV LC_ALL pt_BR.UTF-8
