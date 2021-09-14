@@ -26,5 +26,5 @@ stages:
         containerRegistry: 'AGSupportACR'
         repository: 'dockerFile'
         command: 'build'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'Dockerfile'
         tags: '$(tag)'
